@@ -56,7 +56,7 @@
                     (click)="abrirDialogoEditar(curso.curso_id)">
                     <mat-icon fontIcon="edit" style="color: chocolate;"></mat-icon>
                 </button>
-                <button *ngIf="curso.curso_estado == 'Activo' else btnInactivo" mat-icon-button
+                <button *ngIf="curso.curso_estado == 'Activo' || curso.curso_estado == 'activo' else btnInactivo" mat-icon-button
                     matTooltip="Inhabilitar curso" (click)="inhabilitarCurso(curso)">
                     <mat-icon fontIcon="person_remove" style="color: red"></mat-icon>
                 </button>
