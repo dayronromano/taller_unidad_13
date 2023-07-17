@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Registro de Estudiante</h1>
+<form [formGroup]="registerForm" (submit)="onSubmit()">
+    <mat-dialog-content>
+        <mat-form-field class="form-field-row">
+            <mat-label>Estudiante</mat-label>
+            <mat-select formControlName="estudiante_id">
+                <mat-option *ngFor="let estudiante of estudiantes" [value]="estudiante.estudiante_id">
+                    {{estudiante.estudiante_nombres}} {{estudiante.estudiante_apellidos}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-dialog-actions>
+            <button mat-button mat-dialog-close>Cancelar</button>
+            <button mat-raised-button color="primary" type="submit">Registrar</button>
+        </mat-dialog-actions>
+    </mat-dialog-content>
+</form>
